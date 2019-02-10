@@ -1,1 +1,1 @@
-web: gunicorn forms.py:app
+web: gunicorn forms:app
