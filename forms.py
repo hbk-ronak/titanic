@@ -64,4 +64,4 @@ def fetch():
         return render_template('predict.html')
  
 if __name__ == "__main__":
-    app.run(process.env.PORT, 3000)
+    app.run()
