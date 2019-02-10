@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Predict API</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+	{% if output == 1 or output == 0: %}
+	<div class = "container">
+		<div class = "jumbotron">
+			<h1>The prediction is {{ output }}</h1>
+		</div>
+	</div>
+	{% endif %}
+	<div class = "container">
+		<form method="POST" name="Inputs">
+		
+		<div class = "row">
+		  <div class = "col-md-6">
+			  <div class="form-group">
+			    <label for="name">Name</label>
+			    <input type="text" class="form-control" id="name" placeholder="John Doe" name="Name">
+		  	  </div>
+		  </div>
+		  <div class = "col-md-6">
+		  	<div class="form-group">
+			    <label for="Ticket">Ticket</label>
+			    <input type="text" class="form-control" id="Ticket" placeholder="Ticket_id" name="Ticket">
+		  	</div>
+		  </div>
+		</div>	
+
+		<div class = "row">
+		  <div class = "col-md-6">
+			<div class="form-group">
+				<label for="Pclass">Class</label>
+				<select class="form-control" id="Pclass" name="Pclass">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				</select>
+			</div>
+		  </div>
+		  <div class = "col-md-6">
+		  	<div class="form-group">
+		    <label for="Fare">Fare</label>
+		    <input type="text" class="form-control" id="Fare" placeholder="48.25" name="Fare">
+		  </div>
+		  </div>
+		</div>
+
+		<div class = "row">
+			<div class = "col-md-6">
+				<div class="form-group">
+					<label for="Sex">Sex</label>
+					<select class="form-control" id="Sex" name="Sex">
+						<option>male</option>
+						<option>female</option>
+					</select>
+				</div>
+			</div>
+			<div class = "col-md-6">
+				<div class="form-group">
+					<label for="Age">Age</label>
+					<input type="text" class="form-control" id="Age" placeholder="48.25" name="Age">
+				</div>
+			</div>
+		</div>		
+		  
+		<div class = "row">
+			<div class = "col-md-6">
+				<div class="form-group">
+
+					<label for="SibSp">SibSp</label>
+					<select class="form-control" id="SibSp" name="SibSp">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+					</select>
+			</div>
+			</div>
+
+			<div class = col-md-6>
+				<div class="form-group">
+					<label for="Parch">Parch</label>
+					<select class="form-control" id="Parch" name="Parch">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		  <div class="form-group">
+		    <label for="Embarked">Embarked</label>
+		    <select class="form-control" id="Embarked" name="Embarked">
+		      <option>S</option>
+		      <option>C</option>
+		      <option>Q</option>
+		    </select>
+		    </div>
+		  
+		  
+		  <button class = "btn btn-primary">Submit</button>
+		</form>
+	</div>
+</body>
+</html>
